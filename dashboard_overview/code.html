@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Logistics Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1173d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex flex-col h-screen justify-between">
+<main class="flex-grow overflow-y-auto">
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex items-center justify-between p-4">
+<div></div>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white text-center">Dashboard</h1>
+<button class="text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<div class="p-4">
+<h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Active Shipments</h2>
+<div class="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex-shrink-0 w-40">
+<div class="bg-cover bg-center aspect-square rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMf2HG5MwcJxCMzdDgCuvVYDeCQjIJ47Fe4FvoyCcvJ_yLLowwna3W-uA9mF8GOKV-4Bc0PWyrEEKZrCw4SVgJ287dgJUlqoY9EPbvnqNlot3aO_XfG_55spamm57eSpQ2KrdfLpMMXMJU7-WW5dcEb0lIz3ggWVIUJcPNqQX9zK9gfc6Sh_NFWWufBUkK828kTiUESVZsDUgkW8j5PJEZtmMQ67AqRToFsk02LgyxC-CQBvrjyhB4tAcScxRkLtqdKcTThZdfKNI');"></div>
+<div class="mt-2">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Shipment #12345</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Delivering to 123 Elm St</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-40">
+<div class="bg-cover bg-center aspect-square rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMf2HG5MwcJxCMzdDgCuvVYDeCQjIJ47Fe4FvoyCcvJ_yLLowwna3W-uA9mF8GOKV-4Bc0PWyrEEKZrCw4SVgJ287dgJUlqoY9EPbvnqNlot3aO_XfG_55spamm57eSpQ2KrdfLpMMXMJU7-WW5dcEb0lIz3ggWVIUJcPNqQX9zK9gfc6Sh_NFWWufBUkK828kTiUESVZsDUgkW8j5PJEZtmMQ67AqRToFsk02LgyxC-CQBvrjyhB4tAcScxRkLtqdKcTThZdfKNI');"></div>
+<div class="mt-2">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Shipment #67890</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">En route to 456 Oak Ave</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-40">
+<div class="bg-cover bg-center aspect-square rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMf2HG5MwcJxCMzdDgCuvVYDeCQjIJ47Fe4FvoyCcvJ_yLLowwna3W-uA9mF8GOKV-4Bc0PWyrEEKZrCw4SVgJ287dgJUlqoY9EPbvnqNlot3aO_XfG_55spamm57eSpQ2KrdfLpMMXMJU7-WW5dcEb0lIz3ggWVIUJcPNqQX9zK9gfc6Sh_NFWWufBUkK828kTiUESVZsDUgkW8j5PJEZtmMQ67AqRToFsk02LgyxC-CQBvrjyhB4tAcScxRkLtqdKcTThZdfKNI');"></div>
+<div class="mt-2">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Shipment #11223</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Arriving at 789 Pine Ln</p>
+</div>
+</div>
+</div>
+<h2 class="text-xl font-bold mt-8 mb-4 text-slate-900 dark:text-white">Pending Tasks</h2>
+<div class="space-y-3">
+<div class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg">
+<div class="flex items-center justify-center size-10 bg-primary/10 dark:bg-primary/20 rounded-lg mr-4">
+<span class="material-symbols-outlined text-primary">barcode_scanner</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Scan Package</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Scan package at warehouse</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</div>
+<div class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg">
+<div class="flex items-center justify-center size-10 bg-primary/10 dark:bg-primary/20 rounded-lg mr-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Verify Address</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Verify delivery address</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center justify-center gap-1 text-primary w-16" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">dashboard</span>
+<span class="text-xs font-medium">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined">barcode_scanner</span>
+<span class="text-xs font-medium">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-xs font-medium">Shipments</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-xs font-medium">Reports</span>
+</a>
+</nav>
+<div class="h-safe-area-bottom"></div>
+</footer>
+</div>
+
+</body></html>
